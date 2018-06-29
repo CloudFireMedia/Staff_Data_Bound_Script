@@ -6,8 +6,9 @@ function onOpen(e) {
     .getUi()
       .createMenu("[ Push Updates ]")
         .addItem("Update Staff Folders in Google Drive", "staffFolders")
-//        .addItem("Update Event Sponsorship Pages for Teams", "MaintainPromotionCalendar")
+        .addItem("Update Event Sponsorship Pages for Teams", "maintainPromotionCalendar")
         .addToUi();
 }
 
 function staffFolders() {StaffData.staffFolders()}
+function maintainPromotionCalendar() {StaffData.maintainPromotionCalendar()}
