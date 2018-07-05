@@ -10,5 +10,7 @@ function onOpen(e) {
         .addToUi();
 }
 
-function staffFolders() {StaffData.staffFolders()}
+function staffFolders()              {StaffData.staffFolders()}
 function maintainPromotionCalendar() {StaffData.maintainPromotionCalendar()}
+
+function onInstallableEdit(event)    {StaffData.onEdit(event)}
