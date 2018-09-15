@@ -1,10 +1,10 @@
 var SCRIPT_NAME = 'Staff_Data_Bound_Script'
-var SCRIPT_VERSION = 'v1.0'
+var SCRIPT_VERSION = 'v1.1'
 
 function onOpen() {
   SpreadsheetApp
     .getUi()
-      .createMenu("[ Push Updates ]")
+      .createMenu("CloudFire")
         .addItem("Update Staff Folders in Google Drive", "staffFolders")
         .addItem("Update Event Sponsorship Pages for Teams", "maintainPromotionCalendar")
         .addToUi();
