@@ -1,5 +1,5 @@
 var SCRIPT_NAME = 'Staff_Data_Bound_Script'
-var SCRIPT_VERSION = 'v1.2'
+var SCRIPT_VERSION = 'v1.3'
 
 function onOpen() {
   SpreadsheetApp
