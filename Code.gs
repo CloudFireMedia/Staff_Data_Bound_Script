@@ -1,20 +1,31 @@
 var SCRIPT_NAME = 'Staff_Data_Bound_Script'
-var SCRIPT_VERSION = 'v1.4'
+var SCRIPT_VERSION = 'v1.8'
 
-function onOpen() {
-  SpreadsheetApp
-    .getUi()
-      .createMenu("CloudFire")
-        .addItem("Initialize", "initialize")      
-        .addItem("Update Staff Folders in Google Drive", "staffFolders")
-        .addItem("Update Event Sponsorship Pages for Teams", "maintainPromotionCalendar")
-        .addToUi();
+// Add-on installation
+
+function onInstall(event) {
+  console.log(SCRIPT_VERSION)
+  console.log(event)
+  StaffData.onInstall(event)
 }
 
+// Menu
+
+function onOpen(event) {StaffData.onOpen(event)}
+
 // Menu Options
+
 function staffFolders()              {StaffData.staffFolders()}
 function maintainPromotionCalendar() {StaffData.maintainPromotionCalendar()}
-function Initialize()                {StaffData.Initialize()}
+function initialize()                {StaffData.initialize()}
 
 // Triggers
-function onInstallableEdit(event)    {StaffData.onEdit(event)}
+
+function onSDInstallableEdit(event) {StaffData.onEdit(event)}
+function onSDInstallableChange(event) {StaffData.onChange(event)}
+
+function TEST_misc() {
+  Logger.log(PropertiesService.getDocumentProperties().getProperties())
+  StaffData.TEST_misc()
+  return
+}
