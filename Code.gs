@@ -1,5 +1,5 @@
 var SCRIPT_NAME = 'Staff_Data_Bound_Script'
-var SCRIPT_VERSION = 'v1.8'
+var SCRIPT_VERSION = 'v1.9'
 
 // Add-on installation
 
